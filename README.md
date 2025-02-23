@@ -20,7 +20,7 @@ This project is a simple web-based platform that allows college students to buy 
 ## Installation and Setup
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/college-book-exchange.git
+  git clone https://github.com/yourusername/college-book-exchange.git](https://github.com/Harshad143t/book-selling-app-for-colleges.git
    ```
 2. Open the project folder.
 3. Run `index.html` in a browser.
