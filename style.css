@@ -652,9 +652,9 @@
   }
 
   #nav {
-    height: 80px;
+    height: auto;
     width: auto;
-    justify-content: space-evenly;
+    justify-content: left;
     padding: 5px;
   }
 
@@ -757,7 +757,7 @@
 
   #loggeduser {
     font-size: 16px;
-    margin-top: 5px;
+    width: 50%;
   }
   #log{
    display: flex;
