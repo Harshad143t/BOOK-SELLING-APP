@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>home page</title>
 </head>
+
 <body id="home">
     <div id="nav">
         <p id="log">BookMart</p>
-        <i id="booklogo" class="fa-solid fa-book-open-reader"></i>
-        <input type="text" id="searchBook">
-        <label for="searchBook"><i id="searchBtn" class="fa-solid fa-magnifying-glass"></i></label>
-       <button id="profile" onclick="logInbtn()">Log in</button> 
-       <button onclick="postBook()" id="postBook">Upload book</button> 
-       <span class="marquee" id="loggeduser">userId:</span>  
+        <div id="searchdiv">
+            <input type="text" id="searchBook">
+            <button id="searchBtn" class="fa-solid fa-magnifying-glass"></button>
+        </div>
+        <button id="profile" onclick="logInbtn()">Log in</button>
+        <button onclick="postBook()" id="postBook">Upload book</button>
+        <span class="marquee" id="loggeduser">userId:</span>
     </div>
     <div id="container">
         <div id="createBooksss" class="listbook">
@@ -29,7 +32,7 @@
                 <input id="addphoto" type="text" placeholder="Photo">
             </div>
             <button onclick="cancel()" id="cancelBook">Cancel</button>
-            <button id="submitBook" onclick="addNewBook()">Post</button>  
+            <button id="submitBook" onclick="addNewBook()">Post</button>
         </div>
         <div id="buyPage">
             <img id="buyPageImg" src="" alt="book image">
@@ -43,16 +46,18 @@
             <br>
             <hr>
             <P id="Para">Note : To purchase this book,
-                 please reach out to the given
-                 <U>contact number</U>. We kindly request
-                 that the conversation remains about
-                 the book, such as its condition, price,
-                 and pickup details. Thank you for your
-                 understanding!</P>
+                please reach out to the given
+                <U>contact number</U>. We kindly request
+                that the conversation remains about
+                the book, such as its condition, price,
+                and pickup details. Thank you for your
+                understanding!
+            </P>
             <br>
             <button id="DoneBtn" onclick="Done()">Done</button>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
