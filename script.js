@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let storedBooks = JSON.parse(localStorage.getItem("books")) || [];
     storedBooks.forEach(book => displayBook(book));
 
-    let loggedUser = localStorage.getItem("loggedUser"); // Retrieve UID
+    let loggedUser = localStorage.getItem("loggedUser"); 
     let profileBtn = document.getElementById("profile");
 
     if (loggedUser) {
-        document.getElementById("loggeduser").innerText = `User Id: ${loggedUser}`;
+        document.getElementById("loggeduser").innerText = `UserId:${loggedUser}`;
         profileBtn.innerText = "Log out";
         profileBtn.onclick = function() {
             if (confirm("Are you sure you want to log out?")) {
@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
-// Function to log in (already in your code)
+
 function logInbtn() {
     window.location.href = "index.html";
 }
 
 // Function to log out
 function logOut() {
-    localStorage.removeItem("loggedUser"); // Clear session
+    localStorage.removeItem("loggedUser"); 
     alert("Logged out successfully!");
-    window.location.href = "index.html"; // Redirect to login page
+    window.location.href = "index.html"; 
 }
 
 
@@ -180,11 +180,11 @@ function displayBook(book) {
 
     let loggedUser = localStorage.getItem("loggedUser");
     if (book.owner === loggedUser) {
-        newBook.querySelector(".bookDelBtn").style.display = "flex"; // Show button if owner is logged in
+        newBook.querySelector(".bookDelBtn").style.display = "flex"; 
     }
 
     newBook.querySelector(".buyBtn").addEventListener("click", function () {
-        buyBook(book.owner,book.name,book.price,book.img);// feature to be changed for buying boook
+        buyBook(book.owner,book.name,book.price,book.img);
     });
 
     newBook.querySelector(".bookDelBtn").addEventListener("click", function () {
@@ -216,7 +216,6 @@ function buyBook(owner,name,price,img) {
 
     let BuyPage = document.getElementById("buyPage")
     BuyPage.style.display = (BuyPage.style.display === "none" || BuyPage.style.display === "") ? "flex" : "none";
-    
 }
 function removeBook(bookId, buttonElement) {
     let confirmation = confirm(`Are you sure you want to delete this book?`);
@@ -239,5 +238,35 @@ function removeBook(bookId, buttonElement) {
 function Done(){
     let BuyPage = document.getElementById("buyPage")
     BuyPage.style.display = (BuyPage.style.display === "none" || BuyPage.style.display === "") ? "flex" : "none";
+}
 
+// search book logic 
+
+let searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", () => {
+    let bookName = document.getElementById("searchBook").value.trim().toLowerCase();
+    let storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+
+    let container = document.getElementById("container");
+    container.innerHTML = ''; 
+
+    let foundBooks = storedBooks.filter(book => 
+        book.name.toLowerCase().includes(bookName)
+    );
+
+    if (foundBooks.length === 0) {
+        alert("No books found matching that name.");
+        return;
+    }
+
+    foundBooks.forEach(book => displayBook(book));
+});
+
+function openBuyPage() {
+    document.getElementById("buyPage").style.display = "flex";
+    document.getElementById("nav").style.filter = "blur(5px)";
+}
+function closeBuyPage() {
+    document.getElementById("buyPage").style.display = "none";
+    document.getElementById("nav").style.filter = "none";
 }
