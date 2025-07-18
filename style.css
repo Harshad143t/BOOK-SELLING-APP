@@ -2,6 +2,8 @@
     margin: 0px;
     padding: 0px;
 }
+
+
 #logbody{
     background:linear-gradient(135deg, #88c4bc, #4a90e2);
     background-size: cover;
@@ -150,15 +152,19 @@
 }
 #nav{
     width: 100%;
-    height: 90px;
+    height: auto;
     background-color:#1e3a5f;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: start;
+    flex-direction:row;
+    column-gap: 5px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
 #log{
-    font-size: 35px;
+    font-size: 1.3rem;
     position: relative;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -177,13 +183,11 @@
     text-align: center;
     font-size: 18px;
     height: 35px;
-    margin-top: 5px;
-    margin-left: 5px;
-    min-width:50%;
     border: none;
+     border-radius: 10PX;
+    border-bottom-right-radius: 0px;
     background-color: #f8f9fa;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
     transition: all 0.3s ease-in-out;
     outline: none;
 }
@@ -192,33 +196,36 @@
     box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.5); 
 }
 #searchBtn{
-    width: 25px;
-    height:28px;
-    border-style: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-top:7px;
+    width: 35px;
+    height: 35px;
+    border-style: none;;
+    border-radius: 10px;
     border-left: none;
-    padding-left: 10px;
-    margin-top: 5px;
-    margin-right: 5px;
     color: #1e3a5f;
     background-color: #f8f9fa;
+    margin-top: 0 PX;
+        border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+}
+#searchdiv{
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    width:auto;
 }
 #profile{
     color: #1e3a5f;
-    margin-top: 5px;
-    display: flex;
-    height: 35px;
-    width:100px;
-    border-radius: 20px;
+    height: 34px;
+    width:15%;
+    border-radius: 10px;
     position: relative;
-    padding-top:5px ;
-    font-size: 20px;
-    font-weight: 550;
-    padding-left:12px;
+    font-size: 1.2rem;
+    font-weight: bold;
     border: none;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 #profile:hover{
     color: #ffffff;
@@ -228,14 +235,11 @@
 #postBook{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:#1e3a5f;
-    position: relative;
-    left: 5px;
-    top: 5px;
     height: 35px;
-    width: 140px;
-    border-radius: 20px;
+    width:15%;
+    border-radius: 10px;
     border: none;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight:550;
     transition: all 0.3s ease-in-out;
 }
@@ -247,10 +251,8 @@
 }
 #prf{
     font-size: 23px;
-    padding-top: 2px;
-    padding-left: 15px;
+    border-radius: 10px;
     color: #1e3a5f;
-    border-radius: 20px;
     cursor: pointer;
 }
 #prf:hover{
@@ -264,19 +266,20 @@
     font-size: 24px;
     color: #1e3a5f;
 }
-#container{
-    padding-top: 20PX;
-    display: flex;
-    align-items: flex-start; 
-    justify-content: flex-start;
-    background: linear-gradient(180deg, #f8f9fa, #e0e0e0);
-    width:100%;
-    min-height: 100vh;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    column-gap: 10px;
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  align-content: flex-start;  
+  gap: 10px;                  
+  padding: 10px;
+  background: linear-gradient(180deg, #f8f9fa, #e0e0e0);
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
+
 .books {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -542,38 +545,37 @@
 }
 #loggeduser{
     cursor: pointer;
-    font-weight: 550;
+    font-weight: 600;
     background-color: #ffffff;
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #335678;
-    position: relative;
-    top: 5px;
-    left: 10px;
-    height: 30px;
-    border-radius: 20px;
-    padding-top: 6px;
-    display: inline-block; /* Required for width to work */
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides overflowing text */
-    text-overflow: ellipsis; /* Adds "..." at the end */
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     vertical-align: bottom;
-    min-width: 200px
+    width: auto;
+    justify-content: center;
+    align-items: center;
 }
-#buyPage{
+#buyPage {
     height: 500px;
     width: 400px;
-    background-color: #1aca60;
-    position: absolute;
-    top:56%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background:rgb(239, 245, 244);
+    background-color: rgb(239, 245, 244);
     padding: 20px;
     border-radius: 25px;
     display: none;
     flex-direction: column;
-    box-shadow: 0px 0px 8px rgba(74, 226, 119, 0.5); 
+    box-shadow: 0px 0px 8px rgba(74, 226, 119, 0.5);
+    z-index: 100;
+    position: fixed;             
+    top: 50%;                    
+    left: 50%;                  
+    transform: translate(-50%, -50%);
 }
+
 #buyPageImg{
     position: relative;
     left: 140px;
@@ -616,4 +618,150 @@
     box-shadow: 3px 3px 8px rgba(74, 226, 190, 0.5); 
     color: whitesmoke;
     background-color: #12d687;
+}
+
+/*for phones*/
+
+@media screen and (max-width: 600px) {
+  #forum {
+    width: 90%;
+    padding: 15px;
+    font-size: medium;
+  }
+
+  #number,
+  #passs,
+  #Pass,
+  #passwd,
+  #btn,
+  #loggBtn,
+  #newidbtn,
+  #newidbtn1 {
+    font-size: 16px;
+    height: 32px;
+  }
+
+  #ttl {
+    font-size: x-large;
+    text-align: center;
+  }
+
+  #or {
+    padding-left: 0%;
+    text-align: center;
+  }
+
+  #nav {
+    height: 80px;
+    width: auto;
+    justify-content: space-evenly;
+    padding: 5px;
+  }
+
+  #profile{
+    width: 50px;
+    font-size: medium;
+  }
+  #postBook {
+    margin: 5px 0;
+    font-size: 16px;
+    width: 30%;
+    justify-content: center;
+  }
+  
+  #container {
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .books {
+    height: auto;
+    width: 100%;
+  }
+
+  .bookImg img {
+    width: auto;
+  }
+
+  .bookInfo {
+    width: 100%;
+    align-items: left;
+  }
+
+  .bookname{
+    position: absolute;
+    text-align: left;
+  }
+  .buyBtn, .bookDelBtn {
+    position: absolute;
+  }
+
+  .listbook {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #bookSellName,
+  #bookSellPrice,
+  #bookSellPhoto {
+    width: 300px;
+    display: flex;
+    height: 50px;
+    padding: 0px;
+    
+  }
+
+  #addphoto,
+  #enterbookname,
+  #enterPrice {
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0px;
+    font-weight: 600;
+    color: #335678;
+}
+
+  #submitBook,
+  #cancelBook {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  #buyPage {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  #buyPageImg {
+    position: static;
+    margin: 10px auto;
+    display: block;
+  }
+
+  #bookPageName,
+  #bookPagePrice,
+  #Para,
+  #ContactNumber {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #DoneBtn {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  #loggeduser {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  #log{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
 }
