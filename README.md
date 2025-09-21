@@ -18,5 +18,4 @@ This project is a simple web-based platform that allows college students to buy 
 - JavaScript
 
 ## access live at
-https://harshad143t.github.io/book-selling-app-for-colleges/home.html
-  
+https://harshad143t.github.io/BOOK-SELLING-APP/
